@@ -4,6 +4,7 @@ import axios from "axios";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Form from "./Components/Product/Product";
 import Header from "./Components/Header/Header";
+import Edit from "./Components/Edit/Edit";
 
 class App extends Component {
   constructor(props) {
@@ -70,8 +71,9 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Dashboard data={data} deleteProduct={this.state.deleteProduct} />
-        <Form createProduct={this.state.createProduct} />
+        <Dashboard data={data} deleteProduct={this.deleteProduct} />
+        <Form createProduct={this.createProduct} />
+        <Edit updateProduct={this.updateProduct} />
       </div>
     );
   }

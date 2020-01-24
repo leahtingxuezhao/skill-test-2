@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import defaultPic from "./donkeybaby.jpg";
+import { withRouter, Link } from "react-router-dom";
 
 class Product extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class Product extends Component {
     this.state = {};
   }
   render() {
-    const { name, price } = this.props;
+    const { key, name, price } = this.props;
     return (
       <div className="singleProductWrap">
         <img src={defaultPic} className="defaultPic"></img>
@@ -23,7 +24,9 @@ class Product extends Component {
             >
               Delete
             </button>
-            <button className="greenB">Edit</button>
+            <button className="greenB">
+              <Link to={`/${key}`}>Edit</Link>
+            </button>
           </div>
         </div>
       </div>

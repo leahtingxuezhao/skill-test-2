@@ -4,6 +4,7 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import Form from "../src/Components/Form/Form";
+import Edit from "../src/Components/Edit/Edit";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
@@ -11,6 +12,7 @@ ReactDOM.render(
     <Switch>
       <Route exact path="/" component={App} />
       <Route path="/add" component={Form} />
+      <Route path="/edit/:id" component={Edit} />
     </Switch>
   </HashRouter>,
   document.getElementById("root")
