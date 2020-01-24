@@ -1,0 +1,148 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #ab2a19;
+  display: flex;
+  justify-content: left;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+#logoWrap {
+  display: flex;
+}
+
+#logoName {
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 25px;
+  color: white;
+}
+
+#navWrap {
+  display: flex;
+}
+
+.navBox {
+  height: 30px;
+  width: 100px;
+  background-color: #ed6b5a;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 13px;
+  justify-content: space-around;
+}
+
+.linkText {
+  color: black;
+  position: relative;
+  margin: 6px;
+  text-decoration: none;
+}
+
+.singleProductWrap {
+  height: 150px;
+  width: 330px;
+  background-color: #d34735;
+  border-radius: 7px;
+  margin: auto;
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+}
+
+.defaultPic {
+  width: 180px;
+  height: 130px;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#descriptionWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#nameAndPrice {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.greenButtonWrap {
+  height: 50px;
+  width: 100px;
+  display: flex;
+}
+
+.greenB {
+  height: 30px;
+  width: 60px;
+  background-color: #3ad886;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+#formWrap {
+  height: 430px;
+  width: 350px;
+  background-color: #3ad886;
+  margin: auto;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+
+#addPic {
+  width: 300px;
+  height: 180px;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.text {
+  font-size: 10px;
+}
+
+#textWrap {
+  margin-left: 25px;
+}
+
+.inputBox {
+  width: 280px;
+}
+
+.buttonBox {
+  position: relative margin;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cancelAndChange1 {
+  height: 25px;
+  width: 50px;
+  background-color: #ed6b5a;
+  border-radius: 6px;
+}
+
+.cancelAndChange2 {
+  height: 25px;
+  width: 100px;
+  background-color: #ed6b5a;
+  border-radius: 6px;
+}
