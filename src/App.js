@@ -54,7 +54,7 @@ class App extends Component {
       });
   };
 
-  createCard = (url, name, price) => {
+  createProduct = (url, name, price) => {
     axios
       .post("/api/product", { url, name, price })
       .then(results => {
@@ -71,7 +71,7 @@ class App extends Component {
       <div>
         <Header />
         <Dashboard data={data} deleteProduct={this.state.deleteProduct} />
-        <Form updateProduct={this.state.updateProduct} />
+        <Form createProduct={this.state.createProduct} />
       </div>
     );
   }

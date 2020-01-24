@@ -14,7 +14,7 @@ module.exports = {
     db.read_products().then(data => res.status(200).send(data));
   },
 
-  addProduct: (req, res) => {
+  createProduct: (req, res) => {
     console.log(req.body);
     const db = req.app.get("db");
     const { url, name, price } = req.body;
