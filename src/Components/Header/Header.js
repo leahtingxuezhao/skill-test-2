@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../../App.css";
-import { withRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "/Users/dt/repos-2/devMountain/skill-check/skill-test-2/src/logo-dev.png";
 
 class Header extends Component {

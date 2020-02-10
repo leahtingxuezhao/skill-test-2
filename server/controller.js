@@ -34,6 +34,6 @@ module.exports = {
     const db = req.app.get("db");
     const { id } = req.params;
 
-    db.delete_product(id).then(data => res.sendStatus(200));
+    db.delete_product(Number(id)).then(data => res.sendStatus(200));
   }
 };

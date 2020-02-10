@@ -5,6 +5,8 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import Form from "./Components/Product/Product";
 import Header from "./Components/Header/Header";
 import Edit from "./Components/Edit/Edit";
+import routes from "./routes";
+import { HashRouter } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -69,12 +71,12 @@ class App extends Component {
   render() {
     const { data } = this.state;
     return (
-      <div>
-        <Header />
-        <Dashboard data={data} deleteProduct={this.deleteProduct} />
-        <Form createProduct={this.createProduct} />
-        <Edit updateProduct={this.updateProduct} />
-      </div>
+      <HashRouter>
+        <div>
+          <Header />
+        </div>
+        {routes}
+      </HashRouter>
     );
   }
 }

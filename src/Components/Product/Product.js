@@ -1,14 +1,10 @@
 import React, { Component } from "react";
 import defaultPic from "./donkeybaby.jpg";
-import { withRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Product extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   render() {
-    const { key, name, price } = this.props;
+    const { key, name, price, id, url } = this.props;
     return (
       <div className="singleProductWrap">
         <img src={defaultPic} className="defaultPic"></img>
@@ -20,12 +16,19 @@ class Product extends Component {
           <div className="greenButtonWrap">
             <button
               className="greenB"
-              onClick={e => this.props.deleteProduct(this.props.id)}
+              onClick={e => this.props.deleteProduct(id)}
             >
               Delete
             </button>
             <button className="greenB">
-              <Link to={`/${key}`}>Edit</Link>
+              <Link
+                to={{
+                  pathname: `/edit/${id}`,
+                  state: { url, name, price, id }
+                }}
+              >
+                Edit
+              </Link>
             </button>
           </div>
         </div>

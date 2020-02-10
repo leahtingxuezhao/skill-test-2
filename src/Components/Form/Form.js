@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Header from "../Header/Header";
 import addPic from "./addimg.png";
+import axios from "axios";
 
 class Form extends Component {
   constructor(props) {
@@ -23,10 +23,15 @@ class Form extends Component {
     this.setState({ price: val });
   }
 
-  createProduct = () => {
-    const { url, name, price } = this.state;
-    const { createProduct } = this.props;
-    createProduct(url, name, price);
+  createProduct = (url, name, price) => {
+    axios.post("/api/product", { url, name, price }).then(() => {
+      this.setState({
+        url: "",
+        name: "",
+        price: 0
+      });
+      this.props.history.push("/");
+    });
   };
 
   clearFn = () => {
@@ -44,7 +49,6 @@ class Form extends Component {
     console.log(this.props);
     return (
       <div>
-        <Header />
         <div id="formWrap">
           <div>
             <img src={addPic} id="addPic"></img>
@@ -75,7 +79,7 @@ class Form extends Component {
             </button>
             <button
               className="cancelAndChange2"
-              onClick={() => this.props.createProduct(url, name, price)}
+              onClick={() => this.createProduct(url, name, price)}
             >
               Add to Inventory
             </button>

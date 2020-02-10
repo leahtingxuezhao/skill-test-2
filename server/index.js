@@ -13,7 +13,7 @@ app.use(cors());
 // ENDPOINTS
 app.get("/api/product/:id", ctrl.getProduct);
 app.get("/api/product", ctrl.getAllProducts);
-app.post("/api/product", ctrl.addProduct);
+app.post("/api/product", ctrl.createProduct);
 app.put("/api/product/:id", ctrl.updateProduct);
 app.delete("/api/product/:id", ctrl.deleteProduct);
 
